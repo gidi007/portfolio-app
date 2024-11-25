@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { Send, MapPin, Mail, Phone, Facebook, Twitter, Youtube, Dribbble } from 'lucide-react'
 import { SectionHeader } from '@/components/ui/section-header'

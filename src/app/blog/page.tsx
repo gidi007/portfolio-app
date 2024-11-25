@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useInView } from 'framer-motion'
@@ -35,7 +35,7 @@ const blogPosts = [
 export default function Blog() {
   const sectionRef = useRef(null)
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" })
-  const [hoveredId, setHoveredId] = useState(null)
+  const [hoveredId, setHoveredId] = useState<number | null>(null);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -84,7 +84,7 @@ export default function Blog() {
           animate={isInView ? "visible" : "hidden"}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
         >
-          {blogPosts.map((post, index) => (
+          {blogPosts.map((post) => (
             <motion.article
               key={post.id}
               variants={cardVariants}

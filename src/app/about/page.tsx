@@ -251,7 +251,7 @@ export default function About() {
                 <h2 className="text-xl md:text-2xl font-semibold mb-4">EXPERIENCE</h2>
                 <div className="space-y-6">
                   {experience.map((item) => (
-                    <TimelineItemAnimated key={item.title} item={item} direction="left" />
+                    <TimelineItemAnimated key={item.title} item={item} direction="left" index={0} />
                   ))}
                 </div>
               </div>
@@ -259,7 +259,7 @@ export default function About() {
                 <h2 className="text-xl md:text-2xl font-semibold mb-4">EDUCATION</h2>
                 <div className="space-y-6">
                   {education.map((item) => (
-                    <TimelineItemAnimated key={item.title} item={item} direction="right" />
+                    <TimelineItemAnimated key={item.title} item={item} direction="right" index={0} />
                   ))}
                 </div>
               </div>
